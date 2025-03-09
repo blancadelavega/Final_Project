@@ -40,11 +40,9 @@ label_encoders = {
 # Calculate new variables
 job_change_frequency = num_companies_worked / total_working_years if total_working_years > 0 else 0
 company_loyalty_ratio = years_at_company / age if age > 0 else 0
-overall_satisfaction = (
-    satisfaction_mapping[job_satisfaction] +
-    satisfaction_mapping[environment_satisfaction] +
-    satisfaction_mapping[relationship_satisfaction]
-) / 3
+overall_satisfaction = (satisfaction_mapping[job_satisfaction] 
+                        + satisfaction_mapping[environment_satisfaction] 
+                        + satisfaction_mapping[relationship_satisfaction] ) / 3
 
 # Create DataFrame
 input_data = pd.DataFrame([[
