@@ -71,3 +71,4 @@ if st.button("🔍 Predict"):
     prediction = model.predict(input_data_scaled)[0]
     result = "🚨 **The employee WILL TURNOVER** 🚨" if prediction == 1 else "✅ **The employee will NOT turnover** ✅"
     st.success(result)
+    
